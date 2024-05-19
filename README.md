@@ -56,3 +56,8 @@ En aquest mode, l'aplicació utilitza un fitxer XML descarregat.
 2. Guarda el fitxer XML en el mateix directori que `app.py`.
 
 3. Modifica el codi a `app.py` per utilitzar el fitxer XML local en lloc de l'XML remot. Assegura't que el camí al fitxer XML és correcte. En comptes de posar el link, posarem la ruta de l'XML: ```xml = f"./rss/elpuntavui/{seccio}.xml"```
+
+## Recursos Addicionals
+
+- [Documentació de bootstrap](https://www.w3schools.com/bootstrap5/)
+- [Documentació de feedparser](https://feedparser.readthedocs.io/en/latest/)

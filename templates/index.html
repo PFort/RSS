@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>Diaris!</title>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="javascript:void(0)">Noticies</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#section1">La Vanguardia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section2">El Punt Avui</a>
+          </li>
+          <button id="toggleMode" class="noche"><i class="fa-solid fa-circle-half-stroke" style="color: #ffffff;"></i></button>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://www.lavanguardia.com/images/default.jpg" alt="La Vanguardia" class="d-block"
+          style="width:100%; height:100vh">
+      </div>
+      <div class="carousel-item">
+        <img src="https://www.magdagregoriborrell.com/wp-content/uploads/2018/10/el-punt-avui-por-web.png"
+          alt="elpuntavui" class="d-block" style="width:100%; height:100vh">
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <div id="section1" class="section1">
+      <h1 class="titulo">La Vanguardia</h1>
+      <p class="texto">La Vanguardia es uno de los periódicos más importantes y de mayor tirada en España. Fundado el 1 de febrero de 1881 en Barcelona, es propiedad del Grupo Godó. A lo largo de su historia, se ha caracterizado por su cobertura exhaustiva de noticias nacionales e internacionales, con un enfoque especial en Cataluña y Barcelona.</p>
+      <p class="texto">La Vanguardia fue fundada por los hermanos Carlos y Bartolomé Godó. Desde sus inicios, el periódico ha tenido una significativa influencia en la vida política y social de España. En sus primeros años, apoyaba al gobierno liberal de la época, lo que le permitió consolidarse rápidamente como un medio de comunicación de referencia.</p>
+      <p class="texto">A lo largo de los años, el periódico ha evolucionado tanto en contenido como en formato. En 2011, en respuesta a la demanda de su audiencia, La Vanguardia comenzó a publicar una edición en catalán, ampliando así su alcance y adaptándose a la realidad lingüística de Cataluña. Además, ha sabido adaptarse a los cambios tecnológicos, ofreciendo una versión digital y aplicaciones móviles para mantener informados a sus lectores en todo momento.</p>
+      <p class="texto">La Vanguardia cubre una amplia variedad de temas, incluyendo política, economía, cultura, deportes, y ciencia. Su compromiso con el periodismo de calidad y su capacidad para ofrecer análisis profundos y reportajes exclusivos le han permitido mantenerse como una de las publicaciones más respetadas y leídas en España.</p>
+      <div class="contenedor">
+        <a href="/lavanguardia/deportes"><button class="button">Deportes</button></a>
+        <a href="/lavanguardia/politica"><button class="button">Politica</button></a>
+        <a href="/lavanguardia/vida"><button class="button">Vida</button></a>
+        <a href="/lavanguardia/sucesos"><button class="button">Sucesos</button></a>
+        <a href="/lavanguardia/ciencia"><button class="button">Ciencia</button></a>
+      </div>
+    </div>
+  <hr>
+    <div id="section2" class="section2 ">
+      <h1 class="titulo">El Punt Avui</h1>
+      <p class="texto">El Punt Avui es un periódico catalán de gran relevancia en la región de Cataluña. Nacido de la fusión entre dos periódicos, El Punt y Avui, ofrece una cobertura detallada de noticias locales, nacionales e internacionales, con un enfoque particular en temas que afectan a Cataluña.</p>
+      <p class="texto">El Punt fue fundado en 1979 en Girona y fue uno de los primeros periódicos en catalán de la época de la transición democrática en España. Por otro lado, Avui nació en 1976 en Barcelona como el primer periódico diario en catalán tras el franquismo. En 2011, estos dos periódicos se fusionaron para crear El Punt Avui, consolidándose como un referente de la prensa catalana.</p>
+      <p class="texto">El Punt Avui abarca una amplia gama de temas, desde política y economía hasta cultura y deportes. Se esfuerza por proporcionar una cobertura equilibrada y objetiva de los acontecimientos actuales. Además de su edición impresa, el periódico también ofrece contenido digital a través de su sitio web y aplicaciones móviles, manteniendo así informados a sus lectores en todo momento. Su compromiso con el periodismo de calidad y su enfoque en los asuntos que más importan a la sociedad catalana le han otorgado un lugar destacado en el panorama mediático de la región.</p>
+      <div class="contenedor">
+        <a href="/elpuntavui/deportes"><button class="button">Deportes</button></a>
+        <a href="/elpuntavui/politica"><button class="button">Politica</button></a>
+        <a href="/elpuntavui/local"><button class="button">Local</button></a>
+        <a href="/elpuntavui/economia"><button class="button">Economia</button></a>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const toggleButton = document.getElementById('toggleMode');
+        const body = document.body;
+    
+        const savedMode = localStorage.getItem('mode');
+        if (savedMode) {
+          body.classList.add(savedMode);
+        } else {
+          body.classList.add('light-mode');
+        }
+    
+        toggleButton.addEventListener('click', () => {
+          if (body.classList.contains('light-mode')) {
+            body.classList.replace('light-mode', 'dark-mode');
+            localStorage.setItem('mode', 'dark-mode');
+          } else {
+            body.classList.replace('dark-mode', 'light-mode');
+            localStorage.setItem('mode', 'light-mode');
+          }
+        });
+      });
+    </script>
+
+</body>
+
+</html>

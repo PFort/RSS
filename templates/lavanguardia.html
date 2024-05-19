@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Vanguardia - {{rss.feed.title}}</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="javascript:void(0)">
+        <img src="{{rss.feed.image.url}}" alt="Avatar Logo" style="width:100px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/lavanguardia/deportes">Deportes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/lavanguardia/politica">Politica</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/lavanguardia/vida">Vida</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/lavanguardia/sucesos">Sucesos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/lavanguardia/ciencia">Ciencia</a>
+          </li>
+          <button id="toggleMode" class="noche"><i class="fa-solid fa-circle-half-stroke"
+              style="color: #ffffff;"></i></button>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-3">
+    <h1>La Vanguardia - <small>{{rss.feed.title}}</small></h1>
+
+    <div class="row">
+      {% for item in rss.entries %}
+      <div class="col-sm-12 col-md-6 col-lg-4 col-xxl-3 mb-3">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">{{item.title}}</h5>
+            {% for media in item.media_content %}
+            <p><img src="{{media.url}}" class="img-fluid" alt="{{item.title}}" /></p>
+            {% endfor %}
+            <p class="card-text">{{item.description | safe}}</p>
+          </div>
+          <div class="card-footer">
+            <p class="small">Data de publicació: {{item.published}}</p>
+            <p class="small">Categoria: {{item.category}}</p>
+            <p class="small">Última modificació: {{item.updated}}</p>
+            <p class="small">Autor: {{item.author}}</p>
+            <a href="{{item.link}}" class="btn btn-primary">Anar a la noticia</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleButton = document.getElementById('toggleMode');
+      const body = document.body;
+
+      const savedMode = localStorage.getItem('mode');
+      if (savedMode) {
+        body.classList.add(savedMode);
+      } else {
+        body.classList.add('light-mode');
+      }
+
+      toggleButton.addEventListener('click', () => {
+        if (body.classList.contains('light-mode')) {
+          body.classList.replace('light-mode', 'dark-mode');
+          localStorage.setItem('mode', 'dark-mode');
+        } else {
+          body.classList.replace('dark-mode', 'light-mode');
+          localStorage.setItem('mode', 'light-mode');
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

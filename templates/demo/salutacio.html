@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: {{color}};">
+    {% for i in range(quant) %}
+    salutacio: {{salutacio}}
+    <br/>
+    {% endfor %}
+    <br/>
+    <a href="/hola1">Tornar</a>
+    {% if (foto) %}
+        <p><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcREJuRZw_d9U0bPVUiYsJmS1vXizKV7Sj60BZ3Bq3up-Jyo9ZJpLPaUpLcvm9-lSvLHnNNzf0FbFDxwPyOGvyJaxbwgKGSssEiIHFVp8Q"></p>
+    {% endif %}
+</body>
+</html>
